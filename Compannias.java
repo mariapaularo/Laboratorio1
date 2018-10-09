@@ -1,35 +1,28 @@
+
 package laboratorio;
+
 import com.mongodb.BasicDBObject;
 import com.mongodb.DB;
 import com.mongodb.DBCollection;
 import com.mongodb.Mongo;
-import com.mongodb.WriteConcern;
-import javax.accessibility.AccessibleContext;
 
-public class Peliculas {
+public class Compannias {
     DB BD;
     DBCollection coleccion;
-  
     
-    public Peliculas() throws java.net.UnknownHostException{
+    public Compannias() throws java.net.UnknownHostException{
         Mongo mongo = new Mongo("localhost", 27017);
         BD = mongo.getDB("Laboratorio");
-        coleccion = BD.getCollection("Peliculas");
+        coleccion = BD.getCollection("CompaniaProductora");
         System.out.println("Conexion exitosa");
     }
     
-    public boolean insertar(String nombre, String director, String franquicia, String genero, String productor, String pais, int anno, int duracion, String actores){
+    public boolean insertar(String nombre,int anno,String direccion){
         BasicDBObject document = new BasicDBObject();
         
         document.put("Nombre",nombre);
-        document.put("Director",director);
-        document.put("Franquicia",franquicia);
-        document.put("Genero",genero);
-        document.put("Productor",productor);
-        document.put("Pais",pais);
         document.put("Anno",anno);
-        document.put("Duracion",duracion);
-        document.put("Actores",actores);
+        document.put("Direccion", direccion);
         coleccion.insert(document);
         return true;
     }

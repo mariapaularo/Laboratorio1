@@ -5,10 +5,9 @@ import laboratorio.* ;
             
 public class Laboratorio {
     Peliculas Peli;
-
-    public void Peliculas() throws UnknownHostException {
-        this.Peli = new laboratorio.Peliculas();
-    }
+    Compannias Compania;
+    Interfaz interfaz = new Interfaz();
+    
     }
 
    

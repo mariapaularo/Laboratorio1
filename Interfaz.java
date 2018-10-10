@@ -5,7 +5,9 @@ import com.mongodb.DB;
 import com.mongodb.DBCollection;
 import com.mongodb.DBCursor;
 import com.mongodb.Mongo;
+import java.awt.List;
 import java.net.UnknownHostException;
+import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -535,12 +537,12 @@ public class Interfaz extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
     BasicDBObject document = new BasicDBObject();
     document.put("Nombre","'"+PAnombre.getText()+"'");
-    document.put("Nombre","'"+PAdirector.getText()+"'");
-    document.put("Nombre","'"+PAfranquicia.getText()+"'");
-    document.put("Nombre","'"+PAgenero.getText()+"'");
-    document.put("Nombre","'"+PAproductor.getText()+"'");
-    document.put("Nombre","'"+PApais.getText()+"'");
-    document.put("Nombre","'"+PAanno.getText()+"'");
+    document.put("Director","'"+PAdirector.getText()+"'");
+    document.put("Franquicia","'"+PAfranquicia.getText()+"'");
+    document.put("Genero","'"+PAgenero.getText()+"'");
+    document.put("Productor","'"+PAproductor.getText()+"'");
+    document.put("Pais","'"+PApais.getText()+"'");
+    document.put("Anno","'"+PAanno.getText()+"'");
     document.put("Duracion","'"+PAduracion.getText()+"'");
     document.put("Actores","'"+PAactores.getText()+"'");
     tabla1.insert(document);
@@ -549,8 +551,8 @@ public class Interfaz extends javax.swing.JFrame {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
     String Nvalor = (String) valor.getSelectedItem();
     BasicDBObject Ndocument = new BasicDBObject();
-    BasicDBObject buscar = new BasicDBObject().append("Nombre",PMnombre);
-    Ndocument.put(Nvalor,PMnuevo);    
+    Ndocument.put(Nvalor,PMnuevo);
+    BasicDBObject buscar = new BasicDBObject().append("Nombre",PMnombre);  
     tabla1.update(buscar,Ndocument);
     }//GEN-LAST:event_jButton2ActionPerformed
 
@@ -567,8 +569,8 @@ public class Interfaz extends javax.swing.JFrame {
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
     BasicDBObject document = new BasicDBObject();
     document.put("Nombre","'"+CAnombre.getText()+"'");
-    document.put("Nombre","'"+CAanno.getText()+"'");
-    document.put("Nombre","'"+CAdireccion.getText()+"'");
+    document.put("Anno","'"+CAanno.getText()+"'");
+    document.put("Direccion","'"+CAdireccion.getText()+"'");
     tabla2.insert(document);
     }//GEN-LAST:event_jButton4ActionPerformed
 

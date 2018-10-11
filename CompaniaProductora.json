@@ -1,0 +1,3 @@
+{"_id":{"$oid":"5baead17df14920da89e3ba0"},"Nombre":"Pixar","Anno":{"$numberInt":"1986"},"Direccion":"www.pixar.com"}
+{"_id":{"$oid":"5bbebc616f6e8f2fa8423297"},"Nombre":"Marvel Entertainment","Anno":"1998","Direccion":"www.marvel.com"}
+{"_id":{"$oid":"5bbebd2f6f6e8f2fa8423299"},"Nombre":"DC Films","Anno":"2016","Direccion":"www.dccomics.com/movies"}
